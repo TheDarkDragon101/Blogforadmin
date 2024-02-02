@@ -1,0 +1,104 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>ประชาสัมพันธ์</title>
+
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Your custom styles -->
+    <link rel="stylesheet" href="index.css">"
+    <style>
+        /* Add your custom styles here */
+        body {
+            background-color: #f8f9fa;
+            /* Set a background color for the body */
+        }
+
+        .container {
+            margin-top: 20px;
+            /* Add some top margin to the container */
+        }
+
+        /* Add more custom styles as needed */
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+                <form id="post-form">
+                    <img src="image/logo_hup.png" class="img-fluid mb-3" alt="Logo">
+                    <!-- Remove the topic input from the post-form -->
+                    <div id="head_text">โพสต์เกี่ยวกับประชาสัมพันธ์</div>
+                    <input type="text" class="form-control" id="topic" placeholder="หัวข้อ (Topic)">
+                    <div class="form-group">
+                        <textarea id="post" class="form-control" placeholder="เนื้อหา..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <input type="file" class="form-control" id="image" accept="images/*" placeholder="เลือกรูปภาพ">
+                    </div>
+                    <div class="text-center">
+                        <button type="button" id="btn" class="btn btn-success" onclick="upload()">Upload</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+        <div class="row mt-4" id="posts">
+
+        </div>
+
+        <div class="container">
+            <!-- Your existing HTML content -->
+
+            <script src="utils.js"></script>
+        </div>
+
+    </div>
+
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first...make sure you remove -app from below line -->
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyAgqT4IutDNmAcrKmDlu8ktvRZx0XrRLQg",
+            authDomain: "blogs-82bbe.firebaseapp.com",
+            databaseURL: "https://blogs-82bbe-default-rtdb.firebaseio.com",
+            projectId: "blogs-82bbe",
+            storageBucket: "blogs-82bbe.appspot.com",
+            messagingSenderId: "604431876836",
+            appId: "1:604431876836:web:52747ea5e99e278c09e2f1",
+            measurementId: "G-3DJ6DT0H2Y"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="defualt.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-database.js"></script>
+    <script src="blog_detail.js"></script>
+</body>
+
+</html>
